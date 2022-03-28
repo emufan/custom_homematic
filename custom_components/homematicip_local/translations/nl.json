@@ -1,0 +1,94 @@
+{
+  "title": "Homematic(IP) Local",
+  "config": {
+    "flow_title": "{name}/{host}",
+    "step": {
+      "central": {
+        "title": "Homematic(IP) Local",
+        "description": "Gelieve de vereiste velden in te vullen.",
+        "data": {
+          "instance_name": "Integration instance naam",
+          "host": "CCU Hostname/IP-adres",
+          "username": "CCU Gebruikersnaam",
+          "password": "CCU Wachtwoord",
+          "callback_host": "Callback Hostname/IP-adres",
+          "callback_port": "Callback XML-RPC poort",
+          "json_port": "JSON-RPC poort",
+          "tls": "Gebruik TLS",
+          "verify_tls": "verifier TLS connection"
+        }
+      },
+      "interface": {
+        "description": "Configureer de verbinding met uw CCU2 of CCU3",
+        "data": {
+          "hmip_rf_enabled": "Homematic IP inschakelen",
+          "hmip_rf_port": "HmIP-RF poort",
+          "bidcos_rf_enabled": "Homematic (Bidcos-RF) inschakelen",
+          "bidcos_rf_port": "HM-RF Port",
+          "virtual_devices_enabled": "groepen (Heating-Group) inschakelen",
+          "virtual_devices_port": "Groepen poort",
+          "virtual_devices_path": "Groepen Path",
+          "bidcos_wired_enabled": "BidCos-Wired (HM-Wired) inschakelen",
+          "bidcos_wired_port": "BidCos-Wired poort"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Kon niet verbinden",
+      "invalid_auth": "Ongeldige authenticatie",
+      "unknown": "Onverwachte fout"
+    },
+    "abort": {
+    }
+  },
+  "options": {
+    "step": {
+      "central": {
+        "description": "Configureer zichtbaarheid van Homematic(IP) Local apparaattypes",
+        "title": "Configureer de CCU opnieuw",
+        "data": {
+          "host": "CCU Hostname/IP-adres",
+          "username": "CCU Gebruikersnaam",
+          "password": "CCU Wachtwoord",
+          "callback_host": "Callback Hostname/IP-adres",
+          "callback_port": "Callback XML-RPC poort",
+          "json_port": "JSON-RPC poort",
+          "tls": "Gebruik TLS",
+          "verify_tls": "verifier TLS connection"
+        }
+      },
+      "interface": {
+        "description": "Configureer de verbinding met uw CCU2 of CCU3",
+        "data": {
+          "hmip_rf_enabled": "Homematic IP inschakelen",
+          "hmip_rf_port": "HmIP-RF poort",
+          "bidcos_rf_enabled": "Homematic (Bidcos-RF) inschakelen",
+          "bidcos_rf_port": "HM-RF Port",
+          "virtual_devices_enabled": "groepen (Heating-Group) inschakelen",
+          "virtual_devices_port": "Groepen poort",
+          "virtual_devices_path": "Groepen Path",
+          "bidcos_wired_enabled": "BidCos-Wired (HM-Wired) inschakelen",
+          "bidcos_wired_port": "BidCos-Wired poort"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Kon niet verbinden",
+      "invalid_auth": "Ongeldige authenticatie",
+      "unknown": "Onverwachte fout"
+    },
+    "abort": {
+    }
+  },
+  "device_automation": {
+    "trigger_type": {
+      "press": "Button \"{subtype}\" pressed",
+      "press_short": "Button \"{subtype}\" pressed",
+      "press_long": "Button \"{subtype}\" long pressed",
+      "press_cont": "Button \"{subtype}\" continuously pressed",
+      "press_long_release": "Button \"{subtype}\" long press released",
+      "press_long_start": "Button \"{subtype}\" started long press"
+
+    }
+  }
+}

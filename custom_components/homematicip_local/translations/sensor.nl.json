@@ -1,0 +1,54 @@
+{
+  "state": {
+    "hmip_local__srh": {
+      "CLOSED": "Gesloten",
+      "TILTED": "Gekanteld",
+      "OPEN": "Geopend"
+    },
+    "hmip_local__lock_state": {
+      "UNKNOWN": "Unknown",
+      "LOCKED": "Locked",
+      "UNLOCKED": "Unlocked"
+    },
+    "hmip_local__smoke_detector_alarm_status": {
+      "IDLE_OFF": "Ruststand uit",
+      "PRIMARY_ALARM": "Primair  Alarm",
+      "INTRUSION_ALARM": "Inbraakalarm",
+      "SECONDARY_ALARM": "Secundair Alarm"
+    },
+    "hmip_local__sec_key_error": {
+      "NO_ERROR": "no error",
+      "CLUTCH_FAILURE": "clutch failure",
+      "MOTOR_ABORTED": "motor aborted"
+    },
+    "hmip_local__door_state": {
+      "CLOSED": "closed",
+      "OPEN": "open",
+      "VENTILATION_POSITION": "ventilation position",
+      "POSITION_UNKNOWN": "position unknown"
+    },
+    "hmip_local__direction": {
+      "NONE": "",
+      "UP": "up",
+      "DOWN": "down",
+      "UNDEFINED": "undefined"
+    },
+    "hmip_local__sec_direction": {
+      "NONE": "",
+      "UP": "closing",
+      "DOWN": "opening",
+      "UNDEFINED": "undefined"
+    },
+    "hmip_local__sec_win_status": {
+      "TRICKLE_CHARGE": "trickle charge",
+      "CHARGE": "charge",
+      "DISCHARGE": "discharge",
+      "STATE_UNKNOWN": "state unknown"
+    },
+    "hmip_local__sec_win_error": {
+      "NO_ERROR": "no error",
+      "MOTOR_TURN_ERROR": "motor turn error",
+      "MOTOR_TILT_ERROR": "motor tilt error"
+    }
+  }
+}

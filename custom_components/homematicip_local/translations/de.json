@@ -1,0 +1,97 @@
+{
+  "title": "Homematic(IP) Local",
+  "config": {
+    "flow_title": "{name}/{host}",
+    "step": {
+      "central": {
+        "title": "Homematic(IP) Local",
+        "description": "Bitte Pflichtfelder ausfüllen",
+        "data": {
+          "instance_name": "Instanzname der Integration",
+          "host": "CCU Hostname/IP-Adresse",
+          "username": "CCU Benutzername",
+          "password": "CCU Passwort",
+          "callback_host": "Callback Hostname/IP-Adresse",
+          "callback_port": "Callback XML-RPC Port",
+          "tls": "verwende TLS",
+          "verify_tls": "TLS Verbindung überprüfen",
+          "json_port": "JSON-RPC Port"
+        }
+      },
+      "interface": {
+        "description": "Konfiguration der CCU Schnittstellen",
+        "data": {
+          "hmip_rf_enabled": "aktiviere Homematic IP",
+          "hmip_rf_port": "HmIP-RF Port",
+          "bidcos_rf_enabled": "aktiviere Homematic (Bidcos-RF)",
+          "bidcos_rf_port": "HM-RF Port",
+          "virtual_devices_enabled": "aktiviere Heizgruppen",
+          "virtual_devices_port": "Gruppen Port",
+          "virtual_devices_path": "Gruppen Path",
+          "bidcos_wired_enabled": "aktiviere Homematic-Wired (BidCos-Wired)",
+          "bidcos_wired_port": "BidCos-Wired Port"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Verbindung fehlgeschlagen",
+      "invalid_auth": "Ung\u00fcltige Authentifizierung",
+      "unknown": "Unerwarteter Fehler"
+    },
+    "abort": {
+    }
+  },
+  "options": {
+    "step": {
+      "central": {
+        "title": "Homematic(IP) Local",
+        "description": "Neu-Konfiguration der CCU",
+        "data": {
+          "host": "CCU Hostname/IP-Adresse",
+          "username": "CCU Benutzername",
+          "password": "CCU Passwort",
+          "callback_host": "Callback Hostname/IP-Adresse",
+          "callback_port": "Callback XML-RPC Port",
+          "tls": "verwende TLS",
+          "verify_tls": "TLS Verbindung überprüfen",
+          "json_port": "JSON-RPC Port"
+        }
+      },
+      "interface": {
+        "description": "Neu-Konfiguration der CCU Schnittstellen",
+        "data": {
+          "hmip_rf_enabled": "aktiviere Homematic IP",
+          "hmip_rf_port": "HmIP-RF Port",
+          "bidcos_rf_enabled": "aktiviere Homematic (Bidcos-RF)",
+          "bidcos_rf_port": "HM-RF Port",
+          "virtual_devices_enabled": "aktiviere Heizgruppen",
+          "virtual_devices_port": "Gruppen Port",
+          "virtual_devices_path": "Gruppen Path",
+          "bidcos_wired_enabled": "aktiviere Homematic-Wired (BidCos-Wired)",
+          "bidcos_wired_port": "BidCos-Wired Port"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Verbindung fehlgeschlagen",
+      "invalid_auth": "Ung\u00fcltige Authentifizierung",
+      "unknown": "Unerwarteter Fehler"
+    },
+    "abort": {
+    }
+  },
+  "device_automation": {
+    "trigger_type": {
+      "press": "Taster \"{subtype}\" wurde gedrückt",
+      "press_short": "Taster \"{subtype}\" wurde gedrückt",
+      "press_long": "Taster \"{subtype}\" wurde lange gedrückt",
+      "press_cont": "Taster \"{subtype}\" wird dauerhaft gedrückt",
+      "press_long_release": "Taster \"{subtype}\" wurde nach langem Tastendruck los gelassen",
+      "press_long_start": "Taster \"{subtype}\" hat langen Tastendruck gestartet"
+    },
+    "action_type": {
+      "press_short": "Kurzer Tastendruck auf Taster \"{subtype}\"",
+      "press_long": "Langer Tastendruck auf Taster \"{subtype}\""
+    }
+  }
+}

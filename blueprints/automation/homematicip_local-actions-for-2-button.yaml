@@ -1,0 +1,65 @@
+blueprint:
+  name: Actions for 2-Button Homematic(IP) device
+  description: When a button is pressed, the defined actions will be executed. Please
+    keep in mind, that long-press actions might be executed multiple times, according
+    to your configured minimum duration for long press. This can be configured in
+    your CCU.
+  domain: automation
+  source_url: https://github.com/danielperna84/custom_homematic/blob/devel/blueprints/automation/homematicip_local-actions-for-2-button.yaml
+  input:
+    remote:
+      name: 2-Button Device
+      description: Please select a 2-Button device of your Homematic(IP) Local integration.
+      selector:
+        device:
+          integration: homematicip_local
+    action_top_short:
+      name: Action
+      description: Top-Button, Short Press
+      default: []
+      selector:
+        action: {}
+    action_top_long:
+      name: Action
+      description: Top-Button, Long Press
+      default: []
+      selector:
+        action: {}
+    action_bottom_short:
+      name: Action
+      description: Bottom-Button, Short Press
+      default: []
+      selector:
+        action: {}
+    action_bottom_long:
+      name: Action
+      description: Bottom-Button, Long Press
+      default: []
+      selector:
+        action: {}
+trigger:
+- platform: event
+  event_type: homematic.keypress
+  event_data:
+    device_id: !input 'remote'
+condition: []
+action:
+- choose:
+  - conditions:
+    - condition: template
+      value_template: '{{ trigger.event.data.type  == ''press_short'' and trigger.event.data.subtype  == 2 }}'
+    sequence: !input 'action_top_short'
+  - conditions:
+    - condition: template
+      value_template: '{{ trigger.event.data.type  == ''press_long'' and trigger.event.data.subtype  == 2 }}'
+    sequence: !input 'action_top_long'
+  - conditions:
+    - condition: template
+      value_template: '{{ trigger.event.data.type  == ''press_short'' and trigger.event.data.subtype  == 1 }}'
+    sequence: !input 'action_bottom_short'
+  - conditions:
+    - condition: template
+      value_template: '{{ trigger.event.data.type  == ''press_long'' and trigger.event.data.subtype  == 1 }}'
+    sequence: !input 'action_bottom_long'
+mode: parallel
+max: 10
